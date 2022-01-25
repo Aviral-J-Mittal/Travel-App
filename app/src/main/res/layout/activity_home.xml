@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.mytravelguide.viewmodel.HomeViewModel"/>
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bluegreen"
+        android:id="@+id/drawer_layout"
+        android:fitsSystemWindows="true">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/design_default_color_primary"
+                android:id="@+id/barTool"
+                android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:elevation="4dp"/>
+
+            <com.smarteist.autoimageslider.SliderView
+                android:layout_width="match_parent"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/slider"
+                android:layout_height="175dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="20dp"
+                app:sliderScrollTimeInSec="2"
+                app:sliderAnimationDuration="200"
+                app:sliderAutoCycleDirection="back_and_forth"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/must_visit_cities"
+                android:textSize="15sp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#BFB8B8"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="20dp"
+                android:id="@+id/recycler"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"/>
+
+
+
+        </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+            <com.google.android.material.navigation.NavigationView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:id="@+id/nav_view"
+                android:background="@drawable/yellowback"
+                app:itemIconTint="@color/design_default_color_primary"
+                app:headerLayout="@layout/nav_header"
+                app:menu="@menu/nav_menu" />
+
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>

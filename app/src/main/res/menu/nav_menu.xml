@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/my_trips"
+            android:icon="@drawable/ic_baseline_place_24"
+            android:title="@string/my_trips"/>
+        <item
+            android:id="@+id/dash_board"
+            android:icon="@drawable/ic_baseline_dashboard_24"
+            android:title="@string/dashboard"/>
+        <item
+            android:id="@+id/alarm"
+            android:icon="@drawable/ic_baseline_access_alarms_24"
+            android:title="@string/my_alarm"/>
+
+        <item
+            android:id="@+id/log_out"
+            android:icon="@drawable/ic_baseline_arrow_back_24"
+            android:title="@string/log_out"/>
+
+    </group>
+
+</menu>
